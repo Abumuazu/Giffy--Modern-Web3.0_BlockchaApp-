@@ -1,18 +1,22 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { FC, useState } from 'react'
+import {Navbar, Welcome, Footer, Services, Transaction} from "./Component"
+// import './App.css'
+import "./index.css"
 
-function App() {
-  const [count, setCount] = useState(0)
+interface IApp {
 
-  return (
-    <div className="App">
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
-    </div>
-  )
 }
-
-export default App
+const App:FC<IApp> = () => {
+return (
+  <div className ='min-h-screen'>
+<div className='gradient-bg-welcome'>
+  <Navbar />
+  <Welcome />
+</div>
+<Services />
+<Transaction />
+<Footer />
+  </div>
+)
+}
+export default App;
